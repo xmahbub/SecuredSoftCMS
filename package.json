@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "node server.js",
     "copy": "copyfiles -u 1 ./collections/**/* ./build/collections && copyfiles -u 1 ./globals/**/* ./build/globals && copyfiles *.js ./build",
-    "build": "set NODE_ENV_BUILD=true && next build && payload build && npm run copy",
+    "build": "cross-env NODE_ENV_BUILD=true next build && payload build && npm run copy",
     "start": "cross-env PAYLOAD_CONFIG_PATH=build/payload.config.js NODE_ENV=production node build/server.js",
     "buildstart": "npm run build && npm run start"
   },
