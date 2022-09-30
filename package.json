@@ -1,0 +1,42 @@
+{
+  "name": "securedsoftcms",
+  "version": "0.1.0",
+  "description": "Full Stack CMS with Next,Payload,Tailwind",
+  "main": "build/server.js",
+  "author": "MD Mahbub Hasan",
+  "license": "ISC",
+  "engines": {
+    "node": "16.13.0"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "copy": "copyfiles -u 1 ./collections/**/* ./build/collections && copyfiles -u 1 ./globals/**/* ./build/globals && copyfiles *.js ./build",
+    "build": "set NODE_ENV_BUILD=true && next build && payload build && npm run copy",
+    "start": "cross-env PAYLOAD_CONFIG_PATH=build/payload.config.js NODE_ENV=production node build/server.js",
+    "buildstart": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "daisyui": "^2.28.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "framer-motion": "^7.3.6",
+    "lazy-load-images": "^1.0.1",
+    "next": "12.3.0",
+    "payload": "^1.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-lazy-load-image-component": "^1.5.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
