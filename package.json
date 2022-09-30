@@ -13,8 +13,8 @@
     "dev": "node server.js",
     "copy": "copyfiles -u 1 ./collections/**/* ./build/collections && copyfiles -u 1 ./globals/**/* ./build/globals && copyfiles *.js ./build",
     "build": "cross-env NODE_ENV_BUILD=true next build && payload build && npm run copy",
-    "start": "cross-env PAYLOAD_CONFIG_PATH=build/payload.config.js NODE_ENV=production node build/server.js",
-    "buildstart": "npm run build && npm run start"
+    "start1": "cross-env PAYLOAD_CONFIG_PATH=build/payload.config.js NODE_ENV=production node build/server.js",
+    "start": "npm run build && npm run start"
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
