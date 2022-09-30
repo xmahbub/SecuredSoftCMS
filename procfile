@@ -1,1 +1,1 @@
-web:npm run buildstart
+web:node build/server.js
