@@ -24,6 +24,7 @@
     "express": "^4.18.1",
     "framer-motion": "^7.3.6",
     "lazy-load-images": "^1.0.1",
+    "netlify-plugin-cypress": "^2.2.0",
     "next": "12.3.0",
     "payload": "^1.1.4",
     "react": "18.2.0",
