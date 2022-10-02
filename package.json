@@ -1,6 +1,6 @@
 {
   "name": "securedsoftcms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Full Stack CMS with Next,Payload,Tailwind",
   "main": "build/server.js",
   "author": "MD Mahbub Hasan",
@@ -10,6 +10,7 @@
   },
   "private": true,
   "scripts": {
+    "dev:payload":"node payloadonly.js",
     "dev": "node server.js",
     "copy": "copyfiles -u 1 ./collections/**/* ./build/collections && copyfiles -u 1 ./globals/**/* ./build/globals && copyfiles *.js ./build",
     "build": "cross-env NODE_ENV_BUILD=true next build && payload build && npm run copy",
